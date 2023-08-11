@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react'
 import axios from 'axios';
 import Weather_Info from './Weather_Info';
+import config from '../../config';
 
 
 const Weather_Card = () => {
@@ -28,7 +29,7 @@ const Weather_Card = () => {
       }
 
       try {
-        const api = "2f70447b31dc58d437a4dfc4bd0d61dd";
+        const api = config.apiKey;
         const baseURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api}&units=metric`;
 
 
